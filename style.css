@@ -1,0 +1,169 @@
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    background-color: black;
+    width: 375px;
+    height: 667px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(8,1fr);
+}
+.btn h2,
+#btn0 h2{
+    padding: 0;
+    margin: 19px;
+}
+.btn {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    color: blanchedalmond;
+    font-size: 1.05rem;
+    border-radius: 60px;
+    text-align: center;
+    
+}
+
+.displayScreen {
+    grid-column: 1/5;
+    grid-row: 1/4;
+}
+#btnAC{
+    grid-column: 1/2;
+    grid-row:    4/5;
+}
+#btn7{
+    grid-column: 1/2;
+    grid-row:    5/6;
+}
+#btn4{
+    grid-column: 1/2;
+    grid-row:    6/7;
+}
+#btn1{
+    grid-column: 1/2;
+    grid-row:    7/8;
+}
+#btn0{
+    
+    height: 70px;
+    margin: auto;
+    color: blanchedalmond;
+    font-size: 1.05rem;
+    border-radius: 60px;
+    grid-column: 1/3;
+    grid-row:    8/9;
+    width: 135px;
+    padding-left: 35px;
+}
+#btn0 h2{
+    margin-left: 0;
+}
+
+
+
+#btnPM {
+    grid-column: 2/3;
+    grid-row:    4/5;
+}
+#btn8{
+    grid-column: 2/3;
+    grid-row:    5/6;
+}
+#btn5{
+    grid-column: 2/3;
+    grid-row:    6/7;
+}
+#btn2{
+    grid-column: 2/3;
+    grid-row:    7/8;
+}       
+
+
+#btnBack{
+    grid-column: 3/4;
+    grid-row:    4/5;
+}
+#btn9{
+    grid-column: 3/4;
+    grid-row:    5/6;
+}
+#btn6{
+    grid-column: 3/4;
+    grid-row:    6/7;
+}
+#btn3{
+    grid-column: 3/4;
+    grid-row:    7/8;
+}
+#btnComma{
+    grid-column: 3/4;
+    grid-row:    8/9;
+}
+
+
+#btnDvd{
+    grid-column: 4/5;
+    grid-row:    4/5;
+}
+#btnMtp{
+    grid-column: 4/5;
+    grid-row:    5/6;
+}
+#btnM{
+    grid-column: 4/5;
+    grid-row:    6/7;
+}
+#btnP{
+    grid-column: 4/5;
+    grid-row:    7/8;
+}
+#btnE{
+    grid-column: 4/5;
+    grid-row:    8/9;
+}
+
+
+.btn--num {
+    background-color: rgba(102, 99, 99, 0.212);
+    font-family:  sans-serif;
+}
+.btn--sign {
+    background-color: rgb(255, 104, 28);
+    font-family:  sans-serif;
+}
+.btn--ctrl {
+    background-color: rgba(128, 123, 123, 0.849);
+    color: black;
+    font-family:  sans-serif;
+}
+
+.btn--ctrl:hover,
+.btn--num:hover,
+.btn--sign:hover {
+    opacity: 0.5;
+}
+
+.displayScreen{
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
+    margin-right: 15px;
+    text-align: right;
+    align-self: flex-end;
+    /* background-color: violet; */
+    display: flexbox;
+    align-items: flex-end;
+}
+.displayScreen h2 {
+    
+    align-self: flex-end;
+}
