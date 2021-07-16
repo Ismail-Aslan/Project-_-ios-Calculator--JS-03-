@@ -1,6 +1,7 @@
 const btnNum = document.querySelectorAll(".btn--num");
-const displayScreen = document.querySelector("#displayScreen");
+const displayScreen = document.getElementById("displayScreen");
 const operators = document.querySelectorAll(".btn--sign");
+const controls = document.querySelectorAll(".btn--ctrl");
 
 let result = Number(displayScreen.innerText);
 let previousNum,nextNum;
@@ -8,17 +9,18 @@ let counter = 0,
 operant = true,
 operator = "";
 
-console.log(operators[0].innerText);
-console.log(operators[1].innerText);
-console.log(operators[2].innerText);
-console.log(operators[3].innerText);
-console.log(operators[4].innerText);
+console.log(controls[0].innerText);
+console.log(controls[1].innerText);
+console.log(controls[2].innerText);
+console.log(displayScreen);
+
 
 
 
 
 
 btnNum[0].addEventListener('click',function () {
+    ac_c();
     if (operant) {
         displayScreen.innerHTML = "<h2 style='display:inline;'>0</h2>";
         operant = false;
@@ -33,6 +35,7 @@ btnNum[0].addEventListener('click',function () {
     }
 });
 btnNum[1].addEventListener('click',function () {
+    ac_c();
     if (operant) {
         displayScreen.innerHTML = "<h2 style='display:inline;'>0</h2>";
         operant = false;
@@ -47,6 +50,7 @@ btnNum[1].addEventListener('click',function () {
     }
 });
 btnNum[2].addEventListener('click',function () {
+    ac_c();
     if (operant) {
         displayScreen.innerHTML = "<h2 style='display:inline;'>0</h2>";
         operant = false;
@@ -61,6 +65,7 @@ btnNum[2].addEventListener('click',function () {
     }
 });
 btnNum[3].addEventListener('click',function () {
+    ac_c();
     if (operant) {
         displayScreen.innerHTML = "<h2 style='display:inline;'>0</h2>";
         operant = false;
@@ -75,6 +80,7 @@ btnNum[3].addEventListener('click',function () {
     }
 });
 btnNum[4].addEventListener('click',function () {
+    ac_c();
     if (operant) {
         displayScreen.innerHTML = "<h2 style='display:inline;'>0</h2>";
         operant = false;
@@ -89,6 +95,7 @@ btnNum[4].addEventListener('click',function () {
     }
 });
 btnNum[5].addEventListener('click',function () {
+    ac_c();
     if (operant) {
         displayScreen.innerHTML = "<h2 style='display:inline;'>0</h2>";
         operant = false;
@@ -103,6 +110,7 @@ btnNum[5].addEventListener('click',function () {
     }
 });
 btnNum[6].addEventListener('click',function () {
+    ac_c();
     if (operant) {
         displayScreen.innerHTML = "<h2 style='display:inline;'>0</h2>";
         operant = false;
@@ -117,6 +125,7 @@ btnNum[6].addEventListener('click',function () {
     }
 });
 btnNum[7].addEventListener('click',function () {
+    ac_c();
     if (operant) {
         displayScreen.innerHTML = "<h2 style='display:inline;'>0</h2>";
         operant = false;
@@ -131,6 +140,7 @@ btnNum[7].addEventListener('click',function () {
     }
 });
 btnNum[8].addEventListener('click',function () {
+    ac_c();
     if (operant) {
         displayScreen.innerHTML = "<h2 style='display:inline;'>0</h2>";
         operant = false;
@@ -145,6 +155,7 @@ btnNum[8].addEventListener('click',function () {
     }
 });
 btnNum[9].addEventListener('click',function () {
+    ac_c();
     if (operant) {
         displayScreen.innerHTML = "<h2 style='display:inline;'>0</h2>";
         operant = false;
@@ -310,5 +321,34 @@ operators[4].addEventListener('click',() => {
     operate(previousNum,nextNum,operator);
     showResult();
     operator="";
-    counter++;
+    counter = 0;
+});
+
+
+
+// Control buttons;
+
+
+
+function ac_c() {
+    controls[0].innerHTML = "<h2>C</h2>";
+}
+
+controls[0].addEventListener('click',() => {
+    controls[0].innerHTML = "<h2>AC</h2>";
+    displayScreen.innerHTML = "<h2 style='display:inline;'>0</h2>";
+    result = Number(displayScreen.innerText);
+    previousNum = undefined;
+    nextNum = undefined;
+    counter = 0;
+    operant = true;
+    operator = "";
+});
+controls[1].addEventListener('click',() => {
+    result = 0 - Number(displayScreen.innerText);
+    showResult();
+});
+controls[2].addEventListener('click',() => {
+    result = Number(displayScreen.innerText) / 100;
+    showResult();
 });
